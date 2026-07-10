@@ -1,1 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Porque Tí - Nuestra Historia</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- HEADER / NAVEGACIÓN -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <span class="heart">♥</span>
+                <span class="logo-text">Porque Tí</span>
+            </div>
+            <nav class="nav">
+                <a href="#inicio" class="nav-link">INICIO</a>
+                <a href="#historia" class="nav-link">NUESTRA HISTORIA</a>
+                <a href="#cancion" class="nav-link">LA CANCIÓN</a>
+                <a href="#carta" class="nav-link">CARTA PARA TI</a>
+                <a href="#galeria" class="nav-link">GALERÍA</a>
+                <a href="#final" class="nav-link">FINAL</a>
+            </nav>
+        </div>
+    </header>
 
+    <!-- HERO SECTION -->
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Porque Tí</h1>
+            <p class="hero-subtitle">Una canción para Melissa</p>
+            <p class="hero-description">Hay historias que no caben en unas pocas palabras.<br>Por eso decidí escribir la nuestra de otra manera.</p>
+            <a href="#historia" class="scroll-btn">↓</a>
+        </div>
+    </section>
+
+    <!-- NUESTRA HISTORIA -->
+    <section id="historia" class="historia">
+        <div class="container">
+            <h2 class="section-title">Nuestra Historia</h2>
+            <div class="timeline-container">
+                <div class="timeline-item" onclick="scrollToTimeline(0)">
+                    <img src="https://via.placeholder.com/150/c17a7a/ffffff?text=2013" alt="2013">
+                    <p class="timeline-year">2013</p>
+                    <p class="timeline-text">Todo comenzó</p>
+                </div>
+                <div class="timeline-item" onclick="scrollToTimeline(1)">
+                    <img src="https://via.placeholder.com/150/c17a7a/ffffff?text=Nuestras+primeras+salidas" alt="Primeras salidas">
+                    <p class="timeline-year">2014</p>
+                    <p class="timeline-text">Nuestras primeras salidas</p>
+                </div>
+                <div class="timeline-item" onclick="scrollToTimeline(2)">
+                    <img src="https://via.placeholder.com/150/c17a7a/ffffff?text=Nuestro+matrimonio" alt="Matrimonio">
+                    <p class="timeline-year">2018</p>
+                    <p class="timeline-text">Nuestro matrimonio</p>
+                </div>
+                <div class="timeline-item" onclick="scrollToTimeline(3)">
+                    <img src="https://via.placeholder.com/150/c17a7a/ffffff?text=La+espera+de+Julián" alt="Embarazo">
+                    <p class="timeline-year">2019</p>
+                    <p class="timeline-text">La espera de Julián</p>
+                </div>
+                <div class="timeline-item" onclick="scrollToTimeline(4)">
+                    <img src="https://via.placeholder.com/150/c17a7a/ffffff?text=Julián+nace" alt="Nacimiento">
+                    <p class="timeline-year">2020</p>
+                    <p class="timeline-text">Julián llegó a nuestras vidas</p>
+                </div>
+                <div class="timeline-item" onclick="scrollToTimeline(5)">
+                    <img src="https://via.placeholder.com/150/c17a7a/ffffff?text=Nuestra+alegría" alt="Alegría">
+                    <p class="timeline-year">2022</p>
+                    <p class="timeline-text">Nuestra mayor alegría</p>
+                </div>
+                <div class="timeline-item" onclick="scrollToTimeline(6)">
+                    <img src="https://via.placeholder.com/150/c17a7a/ffffff?text=Hoy+somos+familia" alt="Familia">
+                    <p class="timeline-year">Hoy</p>
+                    <p class="timeline-text">Hoy, nuestra familia</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LA CANCIÓN -->
+    <section id="cancion" class="cancion">
+        <div class="container">
+            <h3 class="cancion-label">ESCUCHA LA CANCIÓN ♥</h3>
+            <h2 class="cancion-title">Porque Tí</h2>
+            <div class="cancion-content">
+                <div class="cancion-image">
+                    <img src="https://via.placeholder.com/300x300/c17a7a/ffffff?text=Porque+Tí" alt="Canción">
+                    <p class="cancion-artist">Alvaro Manzano</p>
+                </div>
+                <div class="cancion-player">
+                    <p class="cancion-interpreted">Escrita e interpretada por</p>
+                    <p class="cancion-interpreter">Alvaro Manzano</p>
+                    <div class="player">
+                        <button class="play-btn" id="playBtn">▶</button>
+                        <div class="player-progress">
+                            <div class="progress-bar" id="progressBar"></div>
+                        </div>
+                        <div class="player-time">
+                            <span id="currentTime">0:00</span>
+                            <span id="duration">4:53</span>
+                        </div>
+                        <button class="volume-btn" id="volumeBtn">🔊</button>
+                    </div>
+                    <button class="reproducir-btn" id="reproducirBtn">♥ REPRODUCIR</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CARTA PARA TI -->
+    <section id="carta" class="carta">
+        <div class="container">
+            <div class="carta-content">
+                <div class="carta-image">
+                    <div class="polaroid">
+                        <img src="https://via.placeholder.com/250x300/c17a7a/ffffff?text=Nosotros" alt="Nosotros">
+                        <p class="polaroid-text">Nosotros</p>
+                    </div>
+                </div>
+                <div class="carta-text">
+                    <h3 class="carta-label">♥ UNA CARTA PARA TI ♥</h3>
+                    <h2 class="carta-title">Melissa...</h2>
+                    <p>Desde que apareciste en mi vida descubrí que el amor no solo se dice; también se construye.</p>
+                    <p>Esta canción guarda nuestros recuerdos, nuestras alegrías, nuestras caídas y todo lo que hemos vivido.</p>
+                    <p>Cada palabra fue escrita pensando en ti.</p>
+                    <p class="carta-highlight">Y aunque la vida siga cambiando, hay algo que nunca cambiará...</p>
+                    <p class="carta-final">Si volviera a empezar...<br><span class="highlight">volvería a elegirte.</span></p>
+                    <div class="heart-icon">♥</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NUESTRO MAYOR REGALO -->
+    <section id="regalo" class="regalo">
+        <div class="container">
+            <h3 class="regalo-label">♥ NUESTRO MAYOR REGALO ♥</h3>
+            <h2 class="regalo-title">Julián</h2>
+            <p class="regalo-description">Lo que empezó con una mirada...<br>hoy tiene un nombre.</p>
+            <div class="heart-icon">♥</div>
+        </div>
+    </section>
+
+    <!-- GALERÍA / NUESTRO HOGAR -->
+    <section id="galeria" class="galeria">
+        <div class="container">
+            <h2 class="section-title">Nuestro Hogar</h2>
+            <div class="galeria-grid">
+                <div class="galeria-item">
+                    <img src="https://via.placeholder.com/300x200/c17a7a/ffffff?text=Momento+1" alt="Galería">
+                </div>
+                <div class="galeria-item">
+                    <img src="https://via.placeholder.com/300x200/c17a7a/ffffff?text=Momento+2" alt="Galería">
+                </div>
+                <div class="galeria-item">
+                    <img src="https://via.placeholder.com/300x200/c17a7a/ffffff?text=Momento+3" alt="Galería">
+                </div>
+                <div class="galeria-item">
+                    <img src="https://via.placeholder.com/300x200/c17a7a/ffffff?text=Momento+4" alt="Galería">
+                </div>
+                <div class="galeria-item">
+                    <img src="https://via.placeholder.com/300x200/c17a7a/ffffff?text=Momento+5" alt="Galería">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL / FOOTER -->
+    <section id="final" class="final">
+        <div class="container">
+            <div class="final-content">
+                <h2 class="final-title">Gracias por caminar esta vida conmigo.</h2>
+                <p class="final-text">Gracias por creer en nosotros.<br>
+                    Gracias por regalarme la familia<br>
+                    con la que siempre soñé.<br>
+                    <span class="highlight-final">Gracias por estar siempre ahí.</span>
+                </p>
+                <div class="house-icon">
+                    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <polygon points="50,10 90,50 80,50 80,90 20,90 20,50 10,50" fill="none" stroke="currentColor" stroke-width="2"/>
+                        <rect x="35" y="50" width="15" height="20" fill="none" stroke="currentColor" stroke-width="1"/>
+                        <rect x="55" y="50" width="15" height="20" fill="none" stroke="currentColor" stroke-width="1"/>
+                        <rect x="30" y="70" width="8" height="8" fill="none" stroke="currentColor" stroke-width="1"/>
+                        <rect x="45" y="70" width="8" height="8" fill="none" stroke="currentColor" stroke-width="1"/>
+                        <rect x="60" y="70" width="8" height="8" fill="none" stroke="currentColor" stroke-width="1"/>
+                    </svg>
+                </div>
+                <p class="final-signature">Te amo. Alvaro ♥</p>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
